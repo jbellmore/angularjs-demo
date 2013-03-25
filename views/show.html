@@ -1,0 +1,34 @@
+<div ng-cloak class="navbar show-navbar navbar-fixed-top">
+  	<div class="navbar-inner">
+		<div class="container">
+		    <ul class="nav">
+		      <li ng-class="{ active: $state.current.name == 'show.home' }"><a href="#/show/{{showTitle}}/">Show Home</a></li>
+		      <li ng-class="{ active: $state.current.name == 'show.season' }" class="dropdown">
+			    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			      {{getSeasonsTitleButtonText()}}
+			      <b class="caret"></b>
+			    </a>
+			    <ul class="dropdown-menu">
+			      <li ng-repeat="season in seasons"><a href="#/show/{{showTitle}}/season/{{season.season}}/">Season {{season.season}}</a></li>
+			    </ul>
+			  </li>
+		      <li ng-class="{ active: $state.current.name == 'show.related' }"><a href="#/show/{{showTitle}}/related">Related</a></li>
+	    	</ul>
+	    	<a class="brand pull-right" href="#/show/{{showTitle}}/">{{details.title}}</a>
+		</div>
+	</div>
+</div>
+
+<div ui-view></div>
+
+<div class="navbar show-navbar navbar-fixed-bottom">
+  	<div class="navbar-inner">
+		<div class="container">
+		    <ul class="nav pull-right">
+		      <li><a href="http://www.imdb.com/title/{{details.imdb_id}}/" target="_blank">IMDb</a></li>
+		      <li><a href="http://thetvdb.com/?tab=series&id={{details.tvdb_id}}"  target="_blank">The TVDB</a></li>
+		      <li><a href="#"  target="_blank">Tv Rage</a></li>
+	    	</ul>
+		</div>
+	</div>
+</div>

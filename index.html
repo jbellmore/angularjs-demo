@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="angularDemo">
+  <head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!-- Load angular in the head -->
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.3/angular.min.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.3/angular-cookies.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/show.css">
+    <link rel="stylesheet" type="text/css" href="css/season.css">
+    <link rel="stylesheet" type="text/css" href="css/episode.css">
+
+  </head>
+  <body ng-cloak ng-controller='mainController'>
+
+    <div id="main-nav" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">{{title}}</a>
+          <ul class="nav">
+            <li ng-class="{ active: $state.current.name == 'trending' }"><a href="#">Trending</a></li>
+            <li ng-class="{ active: $state.current.name == 'genres' }"><a href="#">Genres</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li>
+              <form ng-submit="search()" class="navbar-search pull-left">
+                <input type="text" ng-model='searchCriteria' class="search-query" placeholder="Search">
+                <!-- <button type="submit" class="btn">Submit</button> -->
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {{currentState}}
+
+    <!-- {{data.data}} -->
+
+    </ul>
+
+    <div id="content-container" ui-view>
+
+    </div>
+
+    <!-- Third party libs -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    
+    <script src="js/lib/angular-ui/angular-ui-states.min.js"></script>
+
+    <!-- Application js -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controllers/mainController.js"></script>
+    <script src="js/app/controllers/trendingController.js"></script>
+    <script src="js/app/controllers/searchController.js"></script>
+    <script src="js/app/controllers/show/showController.js"></script>
+    <script src="js/app/controllers/show/showHomeController.js"></script>
+    <script src="js/app/controllers/show/relatedController.js"></script>
+    <script src="js/app/controllers/show/season/seasonController.js"></script>
+    <script src="js/app/controllers/show/season/seasonHomeController.js"></script>
+    <script src="js/app/controllers/show/season/episodeController.js"></script>
+  </body>
+</html>

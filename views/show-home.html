@@ -1,0 +1,18 @@
+<div ng-cloak ng-style="getBackgroundImageStyle(details.images.fanart)" class="show-background-image">
+	<div class="clearfix"></div>
+	<div class="show-info-overlay">
+		<div class="show-info-container container">
+			<img ng-src="{{details.images.poster}}" class="poster hidden-phone hidden-tablet" />
+			<div class="show-description">{{details.overview}}</div>
+			<div class="alert alert-info show-details">
+				<strong>Airs:</strong> {{details.air_day}} @ {{details.air_time}}<br />
+				<strong>Channel:</strong> {{details.network}}<br />
+				<strong>Premiered:</strong> {{ details.first_aired | date:'mediumDate' }}<br />
+				<strong>Country:</strong> {{ details.country}}<br />
+				<strong>Runtime:</strong> {{details.runtime}}m<br />
+				<strong>Grenres: </strong> <span ng-repeat="genre in details.genres">{{genre}}{{ renderCommaIfNotLast($last) }}</span>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>

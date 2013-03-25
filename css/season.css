@@ -1,0 +1,34 @@
+#season-container
+{
+	margin-left: auto; margin-right: auto;
+}
+
+#season-home-container
+{
+	display: inline-block;
+}
+
+	#season-home-container caption
+	{
+		padding: 10px;
+	}
+
+	#season-home-container td
+	{
+		padding: 20px;
+	}
+
+	#season-home-container img
+	{
+		width: 280px;
+		padding: 10px;
+	}
+
+	#season-home-container p
+	{
+		width: 400px;
+		margin-top: 5px;
+		height: 100px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}

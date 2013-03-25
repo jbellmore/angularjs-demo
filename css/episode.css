@@ -1,0 +1,35 @@
+.episode-container
+{
+	margin: 20px;
+	display: inline-block;
+}
+
+	.episode-container img
+	{
+		max-width: 410px;
+	}
+
+	.episode-container .well
+	{
+		display: inline-block;
+		vertical-align: top;
+		margin: 10px;
+	}
+
+		.episode-container .well h4 small
+		{
+			margin-left: 10px;
+		}
+
+		.episode-container .well p
+		{
+			width: 400px;
+			margin-top: 10px;
+		}
+
+	.episode-container a
+	{
+		margin-top: 130px;
+		margin-left: 30px;
+		margin-right: 30px;
+	}

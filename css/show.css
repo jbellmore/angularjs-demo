@@ -1,0 +1,69 @@
+.show-navbar
+{
+	margin-bottom: 0px;
+	margin-top: 40px;
+}
+
+	.show-navbar .brand
+	{
+		/*float: right !important;*/
+		font-size: 2em !important;
+		margin-left: 20px;
+	}
+
+	.show-navbar .navbar-inner .container {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+.show-background-image
+{
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top, center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    min-height: 100%;
+    margin-bottom: 40px;
+}
+
+.show-info-overlay
+{
+	background-color: rgba(0, 0, 0, 0.6);
+	margin-top: 400px;
+	width: 100%;
+}
+
+.show-info-container
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+	.show-info-container .poster
+	{
+		width: 140px;
+		margin-top: -20px;
+		border: solid 1px #222;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.show-info-container .show-description
+	{
+		color: #FFFFFF;
+		max-width: 700px;
+		display: inline-block;
+		vertical-align: top;
+		margin: 20px;
+	}
+
+	.show-info-container .show-details
+	{
+		max-width: 200px;
+		display: inline-block;
+		margin-top: 20px;
+		opacity: .9;
+	}

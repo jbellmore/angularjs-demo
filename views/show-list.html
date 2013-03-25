@@ -1,0 +1,12 @@
+<div class="container text-center" id="show-list-container">
+	<ul>
+		<li ng-repeat="show in shows"
+		class="well inline-block text-center">
+			<a href="#/show/{{getShowNameFromUrl(show.url)}}/">
+			    <img ng-src="{{show.images.poster}}" alt="" />
+			    <h4>{{show.title}} ({{show.year}})</h4>
+			    <em>First aired {{show.first_aired | date:'mediumDate'}}</em>
+		    </a>
+		</li>
+	</ul>
+</div>

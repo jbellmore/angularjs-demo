@@ -1,0 +1,25 @@
+
+
+<div class="text-center">
+	<div class="episode-container">
+
+		<a href="#/show/{{showTitle}}/season/{{seasonId}}/episode/{{episode.number - 1}}" class="btn" ng-show="showLastButton">
+			<i class='icon-backward'></i> Previous
+		</a>
+
+			<div class="well">
+				<img ng-src="{{episode.images.screen}}" class="img-polaroid" alt="" />
+				<h4 class="text-left">
+					{{seasonId}}x{{episode.number}} - {{episode.title}}
+					<small class="pull-right"><i class="icon-thumbs-up"></i> {{episode.ratings.percentage}}%</small>
+					<br />
+					<small>Aired: {{episode.first_aired | date:'mediumDate' }}</small>
+				</h4>
+				<p class="text-left">{{episode.overview}}</p>
+			</div>		
+
+		<a href="#/show/{{showTitle}}/season/{{seasonId}}/episode/{{episode.number + 1}}" class="btn" ng-show="showNextButton">
+			Next <i class='icon-forward'></i>
+		</a>
+	</div>
+</div>

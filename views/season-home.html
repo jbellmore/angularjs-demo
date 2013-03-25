@@ -1,0 +1,22 @@
+<div id="season-home-container">
+	<table ng-cloak class="table">
+		<caption><h4>Season {{seasonId}}</h4></caption>
+		<tbody>
+			<tr ng-repeat="episode in episodes">
+				<td>
+					<a href="{{buildUrlForEpisode(episode.number)}}">
+						<img class="img-polaroid" ng-src="{{episode.screen}}" alt=""/>
+					</a>
+				</td>
+				<td>
+					<a href="{{buildUrlForEpisode(episode.number)}}">
+						<strong>{{seasonId}}x{{episode.number}} - {{episode.title}}</strong><br />
+					</a>
+				    <em class="muted">First aired {{episode.first_aired | date:'mediumDate'}}</em>
+				    <br />
+				    <p>{{episode.overview}}</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
