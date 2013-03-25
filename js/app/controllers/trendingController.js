@@ -18,7 +18,7 @@
 			// Private properties
 			self.Initialize = function() {
 
-				var url = $scope.baseServiceUrl + '/shows/trending.json' + $scope.apiKey + '/' + '?callback=JSON_CALLBACK';
+				var url = $scope.baseServiceUrl + '/shows/trending.json/' + $scope.apiKey + '/' + '?callback=JSON_CALLBACK';
 
 				$http.jsonp(url).then(function(response){
 

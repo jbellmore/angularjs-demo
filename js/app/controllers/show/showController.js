@@ -31,7 +31,7 @@
 				});
 
 				// Load the show season's information
-				var seasonUrl = $scope.baseServiceUrl + '/show/summary.json/' + $scope.apiKey + '/' +  showTitle +'?callback=JSON_CALLBACK';
+				var seasonUrl = $scope.baseServiceUrl + '/show/seasons.json/' + $scope.apiKey + '/' +  showTitle +'?callback=JSON_CALLBACK';
 
 				$http.jsonp(seasonUrl).then(function(response){
 
